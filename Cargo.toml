@@ -1,0 +1,27 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/veribound-interval",
+    "crates/veribound-expr",
+    "crates/veribound-taylor",
+    "crates/veribound-solver",
+    "crates/veribound-cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+# IEEEBound is a self-contained, dependency-free workspace. Everything relies on
+# `std` only so that no network access is required to build and run the full
+# test suite. (See the extension notes for where `rayon` / `num` / SIMD crates
+# would slot in later.)
+[workspace.dependencies]
+veribound-interval = { path = "crates/veribound-interval", version = "0.1.0" }
+veribound-expr = { path = "crates/veribound-expr", version = "0.1.0" }
+veribound-taylor = { path = "crates/veribound-taylor", version = "0.1.0" }
+veribound-solver = { path = "crates/veribound-solver", version = "0.1.0" }
+
+[profile.release]
+opt-level = 3

@@ -1,0 +1,9 @@
+[package]
+name = "veribound-expr"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Arena-based expression AST with interval evaluation and reverse-mode interval AD."
+
+[dependencies]
+veribound-interval.workspace = true

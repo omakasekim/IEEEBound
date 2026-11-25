@@ -1,0 +1,16 @@
+[package]
+name = "veribound-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Command-line interface for IEEEBound (minimize / roots)."
+
+[[bin]]
+name = "veribound"
+path = "src/main.rs"
+
+[dependencies]
+veribound-interval.workspace = true
+veribound-expr.workspace = true
+veribound-taylor.workspace = true
+veribound-solver.workspace = true

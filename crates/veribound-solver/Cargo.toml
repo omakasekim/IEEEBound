@@ -1,0 +1,11 @@
+[package]
+name = "veribound-solver"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Certified branch-and-bound global minimizer and interval Newton solver."
+
+[dependencies]
+veribound-interval.workspace = true
+veribound-expr.workspace = true
+veribound-taylor.workspace = true

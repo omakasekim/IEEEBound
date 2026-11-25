@@ -1,0 +1,10 @@
+[package]
+name = "veribound-taylor"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Multivariate Taylor models with sound interval remainders."
+
+[dependencies]
+veribound-interval.workspace = true
+veribound-expr.workspace = true
